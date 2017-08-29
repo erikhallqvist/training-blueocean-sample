@@ -45,7 +45,7 @@ pipeline {
     }
     stage('Deploy to Production') {
       steps {
-        input(message: 'Deploy to staging?', ok: '\'Fire away!\'')
+        input(message: 'Deploy to production?', ok: '\'Fire away!\'')
         sh './jenkins/deploy.sh production'
         sh 'echo Notifying appropriate team members!'
       }
